@@ -3,7 +3,7 @@
 Official repo for "[Fine-grained Gender Control in Machine Translation with Large Language Models](https://aclanthology.org/2024.naacl-long.303/)".
 
 The repo contains:
-- code for GoE prompting, our proposed approach of controlled machine translation for fine-grained gender control via zero-shot prompting LLMs.
+- code for GoE (Gender-of-Entity) prompting, our proposed approach of controlled machine translation for fine-grained gender control via zero-shot prompting LLMs.
 - human-annotated data and code for our LLM-based gender evaluation metric, LGE (LLMs as Gender Evaluation).
 
 
@@ -15,8 +15,8 @@ The repo contains:
 ## Gender-of-Entity (GoE) prompting
 Run and evaulate GoE prompting with openai api for gender-controlled translation
 
-1. Download datasets
-- For GATE, MTGenEval, and WinoMT Datasets, fetch data from github repo using following command:
+#### 1. Download datasets
+- For GATE, MTGenEval, and WinoMT datasets, fetch data using following command:
 ```bash
 git submodule init
 git submodule update
@@ -24,13 +24,17 @@ git submodule update
 
 - For Must-SHE v1.2.1 dataset, download from https://mt.fbk.eu/must-she/ (Google Forms)
 
-2. Install dependecies
+#### 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-3. Download spacy model for tokenization
-`python -m spacy download en_core_web_lg`
+#### 3. Download spacy model for tokenization
+```bash
+python -m spacy download en_core_web_lg
+```
 
-4. Run GoE prompting translation code with gpt-3.5-turbo
+#### 4. Run GoE prompting translation code with gpt-3.5-turbo
 ```bash
 export OPENAI_API_KEY="..."
 python run_controlled_translation.py  --dataset {mustshe,gate,mtgeneval,winomt} --lang {es,fr,it} --control {none,goe} --split {dev,test}
@@ -38,7 +42,7 @@ python run_controlled_translation.py  --dataset {mustshe,gate,mtgeneval,winomt} 
 # for winomt dataset, supported --control flags are: {none, goe_ambig, goe_full}
 ```
 
-5. Compute gender coverage and accuracy of outputs translations
+#### 5. Compute gender coverage and accuracy of outputs translations
 ```bash
 python run_evaluation.py  --dataset {mustshe,gate,mtgeneval} --lang {es,fr,it} --control {none,goe} --split {dev,test}
 # for mtgeneval dataset, supported --control flags are: {none, goe, none_fewshot, igoe_fewshot}
