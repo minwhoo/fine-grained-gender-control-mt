@@ -1,0 +1,9 @@
+[submodule "data/GATE"]
+	path = data/GATE
+	url = https://github.com/MicrosoftTranslator/GATE
+[submodule "data/mt_gender"]
+	path = data/mt_gender
+	url = https://github.com/gabrielStanovsky/mt_gender
+[submodule "data/machine-translation-gender-eval"]
+	path = data/machine-translation-gender-eval
+	url = https://github.com/amazon-science/machine-translation-gender-eval
