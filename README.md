@@ -2,13 +2,13 @@
 
 Official repo for "[Fine-grained Gender Control in Machine Translation with Large Language Models](https://aclanthology.org/2024.naacl-long.303/)".
 
-Repo includes:
-- code for GoE prompting, our proposed approach for controlled machine translatian enabling fine-grained gender control via zero-shot prompting LLMs.
+The repo contains:
+- code for GoE prompting, our proposed approach of controlled machine translation for fine-grained gender control via zero-shot prompting LLMs.
 - human-annotated data and code for our LLM-based gender evaluation metric, LGE (LLMs as Gender Evaluation).
 
 
 <p align="center">
-<img src="assets/fine_grained_gender_control_examples.png" alt="fine-grained gender control examples" width="30%" />
+<img src="assets/fine_grained_gender_control_examples.png" alt="fine-grained gender control examples" width="40%" />
 </p>
 
 
