@@ -1,7 +1,6 @@
 # Official Code and Data for "Fine-grained Gender Control in Machine Translation with Large Language Models" (NAACL 2024)
 
 Official repo for "[Fine-grained Gender Control in Machine Translation with Large Language Models](https://aclanthology.org/2024.naacl-long.303/)".
-
 The repo contains:
 - code for GoE (Gender-of-Entity) prompting, our proposed approach of controlled machine translation for fine-grained gender control via zero-shot prompting LLMs.
 - human-annotated data and code for our LLM-based gender evaluation metric, LGE (LLMs as Gender Evaluation).
